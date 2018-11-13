@@ -1,0 +1,36 @@
+programa exemplo_LSI_182;
+/* declaração de constantes e varáveis */
+inteiro n = 10;
+/* declaração de constantes e varáveis */
+inteiro x, y, i;
+/* declaração de constantes e varáveis */
+real a, b, c;
+/* declaração de constantes e varáveis */
+caracter c1, c2;
+cadeia [ 30 ] nome;
+booleano achou, fim = falso;
+inteiro [10] vet1, vet2;
+/* declaração de métodos */
+metodo exp ( ref x: inteiro; val y: inteiro ) : inteiro;
+	/* declarações locais */
+	{ 
+		se y = 1
+		entao retorne x
+		senao retorne x * exp (x, y - 1 )
+	};
+metodo processa;
+	/* declarações locais */
+	{ 
+               # comentário de linha
+	     # implementação do método processa
+};
+/*  corpo do programa = método main */
+{	i := 1;
+	enquanto i <= n
+faca {  leia (x, y);
+	  vet1 [ i ] := x;
+	  vet2 [ i ] := y;
+	  processa;
+	  escreva (  ' resultado = ' , exp ( x, y ));
+	};
+}.

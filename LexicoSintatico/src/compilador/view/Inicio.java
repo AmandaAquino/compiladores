@@ -98,10 +98,10 @@ public class Inicio extends JFrame implements ActionListener {
 		this.carregar = new JMenuItem("Carregar");
 		this.salvar = new JMenuItem("Salvar");
 
-		this.analise = new JMenu("An·lise");
-		this.lexico = new JMenuItem("LÈxico");
-		this.sintatico = new JMenuItem("Sint·tico");
-		this.semantico = new JMenuItem("Sem‚ntico");
+		this.analise = new JMenu("An√°lise");
+		this.lexico = new JMenuItem("L√©xico");
+		this.sintatico = new JMenuItem("Sint√°tico");
+		this.semantico = new JMenuItem("Sem√¢ntico");
 
 		this.ajuda = new JMenu("Ajuda");
 		this.ajuda.setMnemonic(KeyEvent.VK_A);
@@ -129,7 +129,7 @@ public class Inicio extends JFrame implements ActionListener {
 	}
 
 	private void renderCodigo() {
-		this.labelCodigo = new JLabel("CÛdigo:");
+		this.labelCodigo = new JLabel("C√≥digo:");
 
 		this.codigo = new JTextArea(10, 10);
 		this.codigo.setLineWrap(true);
@@ -227,21 +227,21 @@ public class Inicio extends JFrame implements ActionListener {
 	}
 
 	public void informeSucessoLexico() {
-		this.resultado.setText("O programa est· lexicamente correto!");
+		this.resultado.setText("O programa est√° lexicamente correto!");
 	}
 
 	public void informeSucessoSintatico() {
-		this.resultado.setText("O programa est· sintaticamente correto!");
+		this.resultado.setText("O programa est√° sintaticamente correto!");
 	}
 
 	public void informeSucessoSemantico() {
-		this.resultado.setText("O analisador sem‚tico ainda n„o foi desenvolvido");
+		this.resultado.setText("O analisador sem√¢ntico ainda n√£o foi desenvolvido");
 
 	}
 
 	private void informeErro(AnalysisError analysisError, Analise analise) {
-		this.resultado.setText("Ocorreu um erro inesperado durante a an·lise " + analise.toString() + ": " + analysisError.getMessage() + "\nFoi lido: " + analysisError.getToken()
-				+ "\nPosiÁ„o: " + analysisError.getPosition() + " indicado pelo cursor acima no cÛdigo");
+		this.resultado.setText("Ocorreu um erro inesperado durante a an√°lise " + analise.toString() + ": " + analysisError.getMessage() + "\nFoi lido: " + analysisError.getToken()
+				+ "\nPosi√ß√£o: " + analysisError.getPosition() + " indicado pelo cursor acima no c√≥digo");
 		this.codigo.setCaretPosition(analysisError.getPosition());
 	}
 

@@ -26,11 +26,11 @@ public interface Constants extends ScannerConstants, ParserConstants
     int t_TOKEN_20 = 20; //"<>"
     int t_TOKEN_21 = 21; //"{"
     int t_TOKEN_22 = 22; //"}"
-    int t_literal = 23;
-    int t_id = 24;
-    int t_num_int = 25;
-    int t_num_real = 26;
-    int t_caracter = 27;
+    int t_TOKEN_23 = 23; //"'"
+    int t_literal = 24;
+    int t_id = 25;
+    int t_num_int = 26;
+    int t_num_real = 27;
     int t_programa = 28;
     int t_se = 29;
     int t_senao = 30;
@@ -54,5 +54,6 @@ public interface Constants extends ScannerConstants, ParserConstants
     int t_e = 48;
     int t_nao = 49;
     int t_fim = 50;
+    int t_caracter = 51;
 
 }

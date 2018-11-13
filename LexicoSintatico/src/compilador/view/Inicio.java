@@ -99,7 +99,7 @@ public class Inicio extends JFrame implements ActionListener {
 		this.salvar = new JMenuItem("Salvar");
 
 		this.analise = new JMenu("Análise");
-		this.lexico = new JMenuItem("Láxico");
+		this.lexico = new JMenuItem("Léxico");
 		this.sintatico = new JMenuItem("Sintático");
 		this.semantico = new JMenuItem("Semântico");
 

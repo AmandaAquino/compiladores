@@ -105,7 +105,6 @@ public class ControladorView {
 	}
 
 	public void clickSemantico() {
-		System.out.print("Entrei semantico\n");
 		this.view.informeSucessoSemantico();
 
 	}

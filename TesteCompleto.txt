@@ -1,0 +1,59 @@
+programa i ;
+/* declaração de constantes e varáveis */
+inteiro n = 10;
+inteiro x, y, i;
+inteiro i := 1; 
+real a, b, c;
+caracter c1, c2;
+cadeia [ 30 ] nome;
+booleano achou, fim = falso;
+inteiro [10] vet1, vet2;
+booleano ehPar = falso;
+/* declaração de métodos */
+metodo exp( ref a: real; ref b: real) : real;
+	/* declarações locais */
+{ 
+		se( a > 0){
+			retorne a + b
+}
+		senao 
+			retorne a * b
+};
+metodo processaNome(ref nome : cadeia);
+	/* declarações locais */
+{ 
+               nome :=  Amanda
+};
+/*  corpo do programa = método main */
+
+metodo teste(ref w : inteiro);
+{
+	se(a >= 0 ) 
+		entao 
+		w:= 3 * 4;
+};
+
+
+metodo leVar(ref n: inteiro; ref x: inteiro; ref y: inteiro);
+{	i := 1;
+	enquanto i <= n
+faca {  leia(n);
+	  vet1 [ i ] := x;
+	  vet2 [ i + 1 ] := y;
+	};
+};
+
+
+
+metodo paridade( ref n: inteiro): booleano; 
+{
+booleano ehPar = falso;
+se (n = 2 )
+entao  ehPar := verdadeiro;
+retorne ehPar;
+};
+
+{
+	paridade(10);
+leVar(n, 3, 23)
+}.

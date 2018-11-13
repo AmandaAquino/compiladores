@@ -47,7 +47,7 @@ public class Sobre extends JDialog {
 	}
 
 	private void render() {
-		this.labelTrabalho = new JLabel("INE5622 - Introdu√ß√£o a Compiladores Trabalho Compilador An√°lise L√©xica e Sint√°tica");
+		this.labelTrabalho = new JLabel("INE5622 - IntroduÁ„o a Compiladores Trabalho Compilador An·lise L·xica e Sint[atica");
 		this.labelAmanda = new JLabel("Amanda Christoval da Veiga de Aquino");
 		this.labelIsabelle = new JLabel("Isabelle Pinheiro");
 

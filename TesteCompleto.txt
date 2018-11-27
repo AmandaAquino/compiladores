@@ -2,7 +2,7 @@ programa i ;
 /* declaração de constantes e varáveis */
 inteiro n = 10;
 inteiro x, y, i;
-inteiro i := 1; 
+inteiro i = 1;  
 real a, b, c;
 caracter c1, c2;
 cadeia [ 30 ] nome;
@@ -13,13 +13,12 @@ booleano ehPar = falso;
 metodo exp( ref a: real; ref b: real) : real;
 	/* declarações locais */
 { 
-		se( a > 0){
-			retorne a + b
-}
-		senao 
-			retorne a * b
+		se( a > 0)
+		entao retorne a + b
+
+		senao retorne a * b
 };
-metodo processaNome(ref nome : cadeia);
+metodo processaNome(ref nome : cadeia[0]);
 	/* declarações locais */
 { 
                nome :=  Amanda
@@ -29,8 +28,7 @@ metodo processaNome(ref nome : cadeia);
 metodo teste(ref w : inteiro);
 {
 	se(a >= 0 ) 
-		entao 
-		w:= 3 * 4;
+	entao w:= 3 * 4;
 };
 
 
@@ -47,10 +45,9 @@ faca {  leia(n);
 
 metodo paridade( ref n: inteiro): booleano; 
 {
-booleano ehPar = falso;
 se (n = 2 )
-entao  ehPar := verdadeiro;
-retorne ehPar;
+entao  retorne verdadeiro;
+retorne falso;
 };
 
 {

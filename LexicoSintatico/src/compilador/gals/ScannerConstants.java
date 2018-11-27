@@ -1660,13 +1660,13 @@ public interface ScannerConstants {
 	int[] TOKEN_STATE = { -2, 0, 0, -2, 2, 3, 12, 15, 9, 14, 5, 13, 25, 6, 4, 16, 10, 17, -1, 24, 7, 8, 21, 22, 23, 25, 26, -2, 26, -1, 11, 18, 20, 19, 24, -1, -2, -1, -1, -1, -1,
 			-2, 0, 25, 26, -2 };
 
-	int[] SPECIAL_CASES_INDEXES = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-			24, 24, 24, 24, 24, 24, 24, 24, 24, 24 };
+	int[] SPECIAL_CASES_INDEXES = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+			23, 23, 23, 23, 23, 23, 23, 23, 23 };
 
-	String[] SPECIAL_CASES_KEYS = { "booleano", "cadeia", "caracter", "div", "e", "enquanto", "entao", "escreva", "faca", "falso", "fim", "inteiro", "leia", "metodo", "nao", "ou",
+	String[] SPECIAL_CASES_KEYS = { "booleano", "cadeia", "caracter", "div", "e", "enquanto", "entao", "escreva", "faca", "falso", "inteiro", "leia", "metodo", "nao", "ou",
 			"programa", "real", "ref", "retorne", "se", "senao", "val", "verdadeiro" };
 
-	int[] SPECIAL_CASES_VALUES = { 41, 40, 50, 39, 47, 31, 30, 34, 32, 45, 49, 43, 33, 36, 48, 46, 27, 42, 38, 35, 28, 29, 37, 44 };
+	int[] SPECIAL_CASES_VALUES = { 41, 40, 49, 39, 47, 31, 30, 34, 32, 45, 43, 33, 36, 48, 46, 27, 42, 38, 35, 28, 29, 37, 44 };
 
 	String[] SCANNER_ERROR = {
 			"Caractere não esperado",

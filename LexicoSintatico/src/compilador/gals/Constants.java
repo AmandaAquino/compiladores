@@ -52,7 +52,6 @@ public interface Constants extends ScannerConstants, ParserConstants
     int t_ou = 46;
     int t_e = 47;
     int t_nao = 48;
-    int t_fim = 49;
-    int t_caracter = 50;
+    int t_caracter = 49;
 
 }

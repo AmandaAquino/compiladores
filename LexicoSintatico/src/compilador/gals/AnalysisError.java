@@ -36,5 +36,4 @@ public class AnalysisError extends Exception {
 	public void setToken(String token) {
 		this.token = token;
 	}
-
 }

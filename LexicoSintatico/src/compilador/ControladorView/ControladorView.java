@@ -104,7 +104,19 @@ public class ControladorView {
 
 	}
 
-	public void clickSemantico() {
+	public void clickSemantico() throws LexicalError, SyntaticError, SemanticError {
+		Sintatico sintatico = new Sintatico();
+		Semantico analisadorSemantico = new Semantico();
+		String codigo = this.view.getCodigo();
+		sintatico.executarSemantico(true);
+		sintatico.parse(new Lexico(codigo), analisadorSemantico);
+
+		// Lexico lex = new Lexico();
+		// String codigo = this.view.getCodigo();
+		// Sintatico sintatico = new Sintatico();
+		// Semantico semantico = new Semantico();
+		// lex.setInput(codigo);
+		// sintatico.parse(lex, semantico);
 		this.view.informeSucessoSemantico();
 
 	}

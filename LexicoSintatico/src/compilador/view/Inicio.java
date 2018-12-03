@@ -191,7 +191,18 @@ public class Inicio extends JFrame implements ActionListener {
 			}
 		}
 		if (e.getSource() == this.semantico) {
-			this.controlador.clickSemantico();
+			try {
+				this.controlador.clickSemantico();
+			} catch (LexicalError e1) {
+				this.informeErro(e1, Analise.LEXICA);
+				e1.printStackTrace();
+			} catch (SyntaticError e1) {
+				this.informeErro(e1, Analise.SINTATICA);
+				e1.printStackTrace();
+			} catch (SemanticError e1) {
+				this.informeErro(e1, Analise.SEMANTICA);
+				e1.printStackTrace();
+			}
 		}
 	}
 

@@ -3,6 +3,7 @@ package compilador.gals;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 import compilador.semantico.Categoria;
@@ -31,7 +32,7 @@ public class Semantico implements Constants {
 	private ArrayList<Item> listaPar = new ArrayList<Item>();
 	private int NPF; // numero de parametros formais
 	private TipoVariavel tipoMetodo;
-	private int posID; // posi��o ID na TS
+	private int posID; // posição ID na TS
 	private TipoVariavel tipoLadoEsquerdo;
 	private boolean opNega;
 	private TipoVariavel tipoFator;
@@ -40,7 +41,7 @@ public class Semantico implements Constants {
 	private TipoVariavel tipoVariavel;
 	private int NPA; // numero parametros atuais
 	private ContextoLID contextoEXPR;
-	private int quantidadeIDs; // a��o 121 e 122
+	private int quantidadeIDs; // ação 121 e 122
 	private Stack<TipoVariavel> tipoTermo = new Stack<TipoVariavel>();
 	private Operador operadorAtual;
 	private Stack<TipoVariavel> tipoExpressaoSimples = new Stack<TipoVariavel>();
@@ -298,12 +299,9 @@ public class Semantico implements Constants {
 	}
 
 	public void acao123(Token token) throws SemanticError {
-		if (this.tipoAtual != TipoVariavel.BOOLEANO
-				|| this.tipoAtual != TipoVariavel.CARACTER
-				|| this.tipoAtual != TipoVariavel.INTEIRO
-				|| this.tipoAtual != TipoVariavel.REAL) {
+		if (!this.getTiposPreDefinidos().contains(this.tipoAtual)) {
 			throw new SemanticError(
-					"#123 - Par�metros devem ser de tipo Pr�-Definido",
+					"#123 - Parâmetros devem ser de tipo Pré-Definido",
 					token.getPosition());
 		} else {
 
@@ -834,7 +832,7 @@ public class Semantico implements Constants {
 					token.getPosition());
 		} else {
 			if (this.tipoMetodo == TipoVariavel.NULO) {
-				throw new SemanticError("Esperava-se m�todo com tipo",
+				throw new SemanticError("Esperava-se método com tipo",
 						token.getPosition());
 			} else {
 				this.NPA = 0;
@@ -844,8 +842,8 @@ public class Semantico implements Constants {
 	}
 
 	/*
-	 * #172 se NPA = NPF ent�o TipoVar := Tipo do resultado da fun��o (* Gera
-	 * C�digo p/ ativa��o do m�todo *) sen�o ERRO(�Erro na quant de par�metros�)
+	 * #172 se NPA = NPF então TipoVar := Tipo do resultado da função (* Gera
+	 * Código p/ ativação do método *) senão ERRO(�Erro na quant de par�metros�)
 	 */
 	public void acao172(Token token) throws SemanticError {
 		if (this.NPA == this.NPF) {
@@ -1015,6 +1013,15 @@ public class Semantico implements Constants {
 			throw new SemanticError("Erro ao invocar m�todo."
 					+ e.getCause().getMessage(), token.getPosition());
 		}
+	}
+
+	public List<TipoVariavel> getTiposPreDefinidos() {
+		List<TipoVariavel> list = new ArrayList<TipoVariavel>();
+		list.add(TipoVariavel.BOOLEANO);
+		list.add(TipoVariavel.CARACTER);
+		list.add(TipoVariavel.INTEIRO);
+		list.add(TipoVariavel.REAL);
+		return list;
 	}
 
 	public TipoVariavel getTipoAtual() {
